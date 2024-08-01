@@ -24,6 +24,44 @@
         <link href="assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="assets/css/tailwind.css">
 
+         <style>
+        /* Custom Styles for FAQ Section */
+        .faq-item {
+            overflow: hidden;
+            border: 1px solid #D1D5DB; /* Border color gray-300 */
+            border-radius: 0.375rem; /* Rounded-md */
+            transition: max-height 0.3s ease;
+            margin-bottom: 1rem; /* Spacing between items */
+        }
+        .faq-question {
+            cursor: pointer;
+            background-color: #f9fafb; /* Light background for better visibility */
+            border: none; /* Remove default button border */
+            outline: none; /* Remove default focus outline */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem; /* Added padding for better touch targets */
+            width: 100%;
+            text-align: left;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1rem; /* Ensure consistent padding */
+        }
+        .faq-answer.show {
+            max-height: 100vh; /* Adjust as needed for smooth scrolling */
+            padding: 1rem; /* Added padding for spacing */
+        }
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+    </style>
     </head>
     
     <body class="font-inter text-base text-black dark:text-white bg-white dark:bg-slate-900">
@@ -48,18 +86,27 @@
           <div class="container relative flex flex-wrap items-center justify-between">
             <a class="navbar-brand md:me-8" href="index.html">
               <span class="inline-block dark:hidden">
-                <!-- <img src="assets/images/logo2.png" class="l-dark" alt="" /> -->
-                <img src="assets/images/logo-transparent.png" class="l-dark" alt="" />
-                <img src="assets/images/logo-transparent.png" class="l-light" alt="" />
+                <img
+                  src="assets/images/logo-transparent2.png"
+                  class="l-dark w-24 lg:w-28"
+                  alt=""
+                />
+                <img
+                  src="assets/images/logo-transparent2.png"
+                  class="l-light w-24 lg:w-28"
+                  alt=""
+                />
               </span>
 
               <!-- dark mode white -->
               <img
-                src="assets/images/logo-white1.png"
-                class="hidden dark:inline-block"
+                src="assets/images/logo-white2.png"
+                class="hidden dark:inline-block w-24 lg:w-28"
                 alt=""
               />
-              <span class="font-bold text-xl dark:text-white light:text-[#0f172a]">
+              <span
+                class="font-bold text-xl lg:text-2xl dark:text-white light:text-[#0f172a] ml-4"
+              >
                 Insight Maestro
               </span>
             </a>
@@ -182,7 +229,6 @@
             <div class="container relative">
                 <div class="grid grid-cols-1 pb-6 text-center">
                     <h3 class="font-semibold text-2xl leading-normal mb-4">Our Features</h3>
-                    <!-- <p class="text-slate-400 max-w-xl mx-auto">This is just a simple text made for this unique and awesome template, you can replace it with any text.</p> -->
                 </div><!--end grid-->
 
                 <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-6 mt-6">
@@ -190,15 +236,10 @@
                         <div class="flex items-center justify-center size-14 -rotate-45 bg-gradient-to-r from-transparent to-teal-500/10 text-teal-500 text-center rounded-full group-hover:bg-teal-500/10 duration-500">
                             <i data-feather="trending-up" class="size-6 rotate-45"></i>
                         </div>
-
-                        <div class="content mt-6 relative z-1">
+                        <div class="content mt-6 relative z-1 h-[15vh] lg:h-[30vh]  ">
                             <a href="" class="title text-lg font-semibold hover:text-teal-500">Intuitive Interface:</a>
-                            <p class="text-slate-400 mt-3">Our user-friendly interface is designed for ease of use, allowing users with minimal technical expertise to perform complex data analyses effortlessly.<br/><br/><br/></p>
-                            <!-- <div class="mt-6">
-                                <a href="" class="text-teal-500">Read More <i class="mdi mdi-chevron-right align-middle"></i></a>
-                            </div> -->
+                            <p class="text-slate-400 mt-3">Our user-friendly interface is designed for ease of use, allowing users with minimal technical expertise to perform complex data analyses effortlessly.</p>
                         </div>
-
                         <div class="absolute bottom-0 -end-16">
                             <i data-feather="trending-up" class="size-48 text-teal-500 opacity-[0.04] dark:opacity-[0.04] group-hover:opacity-10 duration-500"></i>
                         </div>
@@ -208,16 +249,10 @@
                         <div class="flex items-center justify-center size-14 -rotate-45 bg-gradient-to-r from-transparent to-teal-500/10 text-teal-500 text-center rounded-full group-hover:bg-teal-500/10 duration-500">
                             <i data-feather="dollar-sign" class="size-6 rotate-45"></i>
                         </div>
-
-                        <div class="content mt-6 relative z-1">
+                        <div class="content mt-6 relative z-1 h-[15vh] lg:h-[30vh]">
                             <a href="" class="title text-lg font-semibold hover:text-teal-500">Advanced Analytics:</a>
-                            <p class="text-slate-400 mt-3">Insight Maestro goes beyond traditional analytics, uncovering hidden patterns and relational rules in your data to deliver deeper, more actionable insights.<br/><br/><br/></p>
-
-                            <!-- <div class="mt-6">
-                                <a href="" class="text-teal-500">Read More <i class="mdi mdi-chevron-right align-middle"></i></a>
-                            </div> -->
+                            <p class="text-slate-400 mt-3">Insight Maestro goes beyond traditional analytics, uncovering hidden patterns and relational rules in your data to deliver deeper, more actionable insights.</p>
                         </div>
-
                         <div class="absolute bottom-0 -end-16">
                             <i data-feather="dollar-sign" class="size-48 text-teal-500 opacity-[0.04] dark:opacity-[0.04] group-hover:opacity-10 duration-500"></i>
                         </div>
@@ -227,14 +262,9 @@
                         <div class="flex items-center justify-center size-14 -rotate-45 bg-gradient-to-r from-transparent to-teal-500/10 text-teal-500 text-center rounded-full group-hover:bg-teal-500/10 duration-500">
                             <i data-feather="compass" class="size-6 rotate-45"></i>
                         </div>
-
-                        <div class="content mt-6 relative z-1">
+                        <div class="content mt-6 relative z-1 h-[15vh] lg:h-[30vh]  ">
                             <a href="" class="title text-lg font-semibold hover:text-teal-500">Real-Time Data Processing:</a>
-                            <p class="text-slate-400 mt-3">Stay up-to-date with real-time data processing capabilities, ensuring you have the most current insights to make informed decisions quickly.<br/><br/></p>
-
-                            <!-- <div class="mt-6">
-                                <a href="" class="text-teal-500">Read More <i class="mdi mdi-chevron-right align-middle"></i></a>
-                            </div> -->
+                            <p class="text-slate-400 mt-3">Stay up-to-date with real-time data processing capabilities, ensuring you have the most current insights to make informed decisions quickly.</p>
                         </div>
 
                         <div class="absolute bottom-0 -end-16">
@@ -246,14 +276,9 @@
                         <div class="flex items-center justify-center size-14 -rotate-45 bg-gradient-to-r from-transparent to-teal-500/10 text-teal-500 text-center rounded-full group-hover:bg-teal-500/10 duration-500">
                             <i data-feather="command" class="size-6 rotate-45"></i>
                         </div>
-
-                        <div class="content mt-6 relative z-1">
+                        <div class="content mt-6 relative z-1 h-[15vh] lg:h-[30vh]  ">
                             <a href="" class="title text-lg font-semibold hover:text-teal-500">Customizable Reports and Dashboards:</a>
                             <p class="text-slate-400 mt-3">Tailor your reports and dashboards to meet your specific business needs. Our platform allows for extensive customization, so you get the insights that matter most to you.</p>
-
-                            <!-- <div class="mt-6">
-                                <a href="" class="text-teal-500">Read More <i class="mdi mdi-chevron-right align-middle"></i></a>
-                            </div> -->
                         </div>
 
                         <div class="absolute bottom-0 -end-16">
@@ -266,15 +291,10 @@
                             <i data-feather="box" class="size-6 rotate-45"></i>
                         </div>
 
-                        <div class="content mt-6 relative z-1">
+                        <div class="content mt-6 relative z-1 h-[15vh] lg:h-[30vh]  ">
                             <a href="" class="title text-lg font-semibold hover:text-teal-500">Seamless Integrations:</a>
                             <p class="text-slate-400 mt-3">Insight Maestro integrates smoothly with your existing systems and data sources, enhancing your analytics capabilities without disrupting your workflow.</p>
-
-                            <!-- <div class="mt-6">
-                                <a href="" class="text-teal-500">Read More <i class="mdi mdi-chevron-right align-middle"></i></a>
-                            </div> -->
                         </div>
-
                         <div class="absolute bottom-0 -end-16">
                             <i data-feather="box" class="size-48 text-teal-500 opacity-[0.04] dark:opacity-[0.04] group-hover:opacity-10 duration-500"></i>
                         </div>
@@ -284,16 +304,10 @@
                         <div class="flex items-center justify-center size-14 -rotate-45 bg-gradient-to-r from-transparent to-teal-500/10 text-teal-500 text-center rounded-full group-hover:bg-teal-500/10 duration-500">
                             <i data-feather="camera" class="size-6 rotate-45"></i>
                         </div>
-
-                        <div class="content mt-6 relative z-1">
+                        <div class="content mt-6 relative z-1 h-[15vh] lg:h-[30vh]  ">
                             <a href="" class="title text-lg font-semibold hover:text-teal-500">Cost-Effective Solutions:</a>
                             <p class="text-slate-400 mt-3">Designed to be affordable for businesses of all sizes, Insight Maestro offers significant value and ROI with advanced features at a reasonable price.</p>
-
-                            <!-- <div class="mt-6">
-                                <a href="" class="text-teal-500">Read More <i class="mdi mdi-chevron-right align-middle"></i></a>
-                            </div> -->
                         </div>
-
                         <div class="absolute bottom-0 -end-16">
                             <i data-feather="camera" class="size-48 text-teal-500 opacity-[0.04] dark:opacity-[0.04] group-hover:opacity-10 duration-500"></i>
                         </div>
@@ -303,16 +317,10 @@
                         <div class="flex items-center justify-center size-14 -rotate-45 bg-gradient-to-r from-transparent to-teal-500/10 text-teal-500 text-center rounded-full group-hover:bg-teal-500/10 duration-500">
                             <i data-feather="bell" class="size-6 rotate-45"></i>
                         </div>
-
-                        <div class="content mt-6 relative z-1">
+                        <div class="content mt-6 relative z-1 h-[15vh] lg:h-[30vh]  ">
                             <a href="" class="title text-lg font-semibold hover:text-teal-500">Dedicated Support Team:</a>
-                            <p class="text-slate-400 mt-3">Our dedicated support team is always available to assist you, ensuring you get the most out of Insight Maestro with timely and effective help.<br/><br/></p>
-
-                            <!-- <div class="mt-6">
-                                <a href="" class="text-teal-500">Read More <i class="mdi mdi-chevron-right align-middle"></i></a>
-                            </div> -->
+                            <p class="text-slate-400 mt-3">Our dedicated support team is always available to assist you, ensuring you get the most out of Insight Maestro with timely and effective help.</p>
                         </div>
-
                         <div class="absolute bottom-0 -end-16">
                             <i data-feather="bell" class="size-48 text-teal-500 opacity-[0.04] dark:opacity-[0.04] group-hover:opacity-10 duration-500"></i>
                         </div>
@@ -322,16 +330,10 @@
                         <div class="flex items-center justify-center size-14 -rotate-45 bg-gradient-to-r from-transparent to-teal-500/10 text-teal-500 text-center rounded-full group-hover:bg-teal-500/10 duration-500">
                             <i data-feather="monitor" class="size-6 rotate-45"></i>
                         </div>
-
-                        <div class="content mt-6 relative z-1">
+                        <div class="content mt-6 relative z-1 h-[15vh] lg:h-[30vh]  ">
                             <a href="" class="title text-lg font-semibold hover:text-teal-500">Continuous Improvement:</a>
                             <p class="text-slate-400 mt-3">We are committed to ongoing innovation and regularly update our platform with new features and enhancements based on user feedback and technological advancements.</p>
-
-                            <!-- <div class="mt-6">
-                                <a href="" class="text-teal-500">Read More <i class="mdi mdi-chevron-right align-middle"></i></a>
-                            </div> -->
                         </div>
-
                         <div class="absolute bottom-0 -end-16">
                             <i data-feather="monitor" class="size-48 text-teal-500 opacity-[0.04] dark:opacity-[0.04] group-hover:opacity-10 duration-500"></i>
                         </div>
@@ -809,87 +811,93 @@
         </section>
         <!-- End Pricing -->
 
-        <!-- Start FAQ -->
-        <section class="relative md:py-24 py-16" id="faq">
-            <div class="container relative">
-                <div class="grid grid-cols-1 pb-6 text-center">
+    <!-- Start FAQ -->
+        <section class="relative py-16" id="faq">
+            <div class="container mx-auto">
+                <div class="text-center pb-6">
                     <h3 class="font-semibold text-2xl leading-normal mb-4">Frequently Asked Questions</h3>
-                </div><!--end grid-->
+                </div>
 
-                <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 mt-6 gap-6">
+                <div>
                     <!-- FAQ Item 1 -->
-                    <div class="faq-item group relative overflow-hidden border border-gray-300 rounded-md">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center">
-                            <span class="title text-lg font-semibold">What is Insight Maestro?</span>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                             <span class="title text-lg font-semibold dark:text-slate-800">What is Insight Maestro?</span>
                             <span class="faq-icon text-teal-600 text-xl">&#9662;</span>
                         </button>
-                        <div class="faq-answer text-slate-400 p-4 hidden">
+                        <div class="faq-answer text-slate-400">
                             Insight Maestro is an advanced data analytics tool that goes beyond traditional machine learning capabilities to identify important patterns and relational rules in data, including frequent itemsets, sequences, and high-revenue itemsets.
                         </div>
-                    </div><!--end content-->
+                    </div>
+                    <!--end content-->
 
                     <!-- FAQ Item 2 -->
-                    <div class="faq-item group relative overflow-hidden border border-gray-300 rounded-md">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center">
-                            <span class="title text-lg font-semibold">Is Insight Maestro suitable for small businesses?</span>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                             <span class="title text-lg font-semibold dark:text-slate-800">Is Insight Maestro suitable for small businesses?</span>
                             <span class="faq-icon text-teal-600 text-xl">&#9662;</span>
                         </button>
-                        <div class="faq-answer text-slate-400 p-4 hidden">
+                        <div class="faq-answer text-slate-400">
                             Absolutely. Insight Maestro is designed to be scalable and user-friendly, making it suitable for businesses of all sizes, from small startups to large enterprises. Insight Maestro provides affordable pricing options, making advanced data analytics accessible for businesses of all sizes.
                         </div>
-                    </div><!--end content-->
+                    </div>
+                    <!--end content-->
 
                     <!-- FAQ Item 3 -->
-                    <div class="faq-item group relative overflow-hidden border border-gray-300 rounded-md">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center">
-                            <span class="title text-lg font-semibold">Do I need technical expertise to use Insight Maestro?</span>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                             <span class="title text-lg font-semibold dark:text-slate-800">Do I need technical expertise to use Insight Maestro?</span>
                             <span class="faq-icon text-teal-600 text-xl">&#9662;</span>
                         </button>
-                        <div class="faq-answer text-slate-400 p-4 hidden">
+                        <div class="faq-answer text-slate-400">
                             No, Insight Maestro is designed with an intuitive user interface that allows users with minimal technical expertise to leverage its powerful analytics capabilities. User-friendly interface: Our intuitive dashboard requires minimal technical expertise, making data analysis accessible to every team member.
                         </div>
-                    </div><!--end content-->
+                    </div>
+                    <!--end content-->
 
                     <!-- FAQ Item 4 -->
-                    <div class="faq-item group relative overflow-hidden border border-gray-300 rounded-md">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center">
-                            <span class="title text-lg font-semibold">Can Insight Maestro integrate with my existing data sources?</span>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                             <span class="title text-lg font-semibold dark:text-slate-800">Can Insight Maestro integrate with my existing data sources?</span>
                             <span class="faq-icon text-teal-600 text-xl">&#9662;</span>
                         </button>
-                        <div class="faq-answer text-slate-400 p-4 hidden">
+                        <div class="faq-answer text-slate-400">
                             Yes, Insight Maestro supports integration with a wide range of data sources, ensuring seamless integration into your existing workflows. Insight Maestro offers customizable integrations to seamlessly work with your current systems and enhance your data analytics capabilities.
                         </div>
-                    </div><!--end content-->
+                    </div>
+                    <!--end content-->
 
                     <!-- FAQ Item 5 -->
-                    <div class="faq-item group relative overflow-hidden border border-gray-300 rounded-md">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center">
-                            <span class="title text-lg font-semibold">How does Insight Maestro differ from other data analytics tools?</span>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                             <span class="title text-lg font-semibold dark:text-slate-800">How does Insight Maestro differ from other data analytics tools?</span>
                             <span class="faq-icon text-teal-600 text-xl">&#9662;</span>
                         </button>
-                        <div class="faq-answer text-slate-400 p-4 hidden">
+                        <div class="faq-answer text-slate-400">
                             Unlike other tools that provide basic analytics and machine learning, Insight Maestro offers advanced pattern recognition and relational rule identification, providing deeper insights into your data. Insight Maestro goes beyond traditional analytics, uncovering hidden patterns and delivering deeper insights for optimal decision-making.
                         </div>
-                    </div><!--end content-->
+                    </div>
+                    <!--end content-->
 
                     <!-- FAQ Item 6 -->
-                    <div class="faq-item group relative overflow-hidden border border-gray-300 rounded-md">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center">
-                            <span class="title text-lg font-semibold">Can Insight Maestro help with regulatory compliance?</span>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                             <span class="title text-lg font-semibold dark:text-slate-800">Can Insight Maestro help with regulatory compliance?</span>
                             <span class="faq-icon text-teal-600 text-xl">&#9662;</span>
                         </button>
-                        <div class="faq-answer text-slate-400 p-4 hidden">
+                        <div class="faq-answer text-slate-400">
                             Yes, Insight Maestro can assist in regulatory compliance by providing detailed data insights and reports, helping you ensure that your operations meet industry standards and regulations. Ensure data security and regulatory compliance, protecting your business from potential legal issues and data breaches.
                         </div>
-                    </div><!--end content-->
+                    </div>
+                    <!--end content-->
 
                     <!-- FAQ Item 7 -->
-                    <div class="faq-item group relative overflow-hidden border border-gray-300 rounded-md">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center">
-                            <span class="title text-lg font-semibold">What are the main features of Insight Maestro?</span>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                             <span class="title text-lg font-semibold dark:text-slate-800">What are the main features of Insight Maestro?</span>
                             <span class="faq-icon text-teal-600 text-xl">&#9662;</span>
                         </button>
-                        <div class="faq-answer text-slate-400 p-4 hidden">
+                        <div class="faq-answer text-slate-400">
                             Key features include:
                             <ul class="list-disc list-inside">
                                 <li>Advanced pattern recognition</li>
@@ -905,44 +913,50 @@
                                 <li>Ease of use: An intuitive interface ensures accessibility for all users</li>
                             </ul>
                         </div>
-                    </div><!--end content-->
+                    </div>
+                    <!--end content-->
 
                     <!-- FAQ Item 8 -->
-                    <div class="faq-item group relative overflow-hidden border border-gray-300 rounded-md">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center">
-                            <span class="title text-lg font-semibold">How does Insight Maestro handle data security?</span>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                             <span class="title text-lg font-semibold dark:text-slate-800">How does Insight Maestro handle data security?</span>
                             <span class="faq-icon text-teal-600 text-xl">&#9662;</span>
                         </button>
-                        <div class="faq-answer text-slate-400 p-4 hidden">
+                        <div class="faq-answer text-slate-400">
                             Insight Maestro prioritizes data security and complies with industry standards and regulations. It uses advanced encryption and security protocols to ensure your data is protected. Insight Maestro ensures data security and regulatory compliance, providing robust measures to protect your sensitive information.
                         </div>
-                    </div><!--end content-->
+                    </div>
+                    <!--end content-->
 
                     <!-- FAQ Item 9 -->
-                    <div class="faq-item group relative overflow-hidden border border-gray-300 rounded-md">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center">
-                            <span class="title text-lg font-semibold">What kind of data can Insight Maestro analyze?</span>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                             <span class="title text-lg font-semibold dark:text-slate-800">What kind of data can Insight Maestro analyze?</span>
                             <span class="faq-icon text-teal-600 text-xl">&#9662;</span>
                         </button>
-                        <div class="faq-answer text-slate-400 p-4 hidden">
-                            Insight Maestro can analyze structured data from various sources, including transactional data, customer data, operational data, and more.
+                        <div class="faq-answer text-slate-400">
+                            Insight Maestro can analyze structured data from various sources, including transactional data, customer data, operational data, and more. It supports a wide range of formats to provide comprehensive insights. Insight Maestro can analyze various data types, including transactional data, customer interactions, and more.
                         </div>
-                    </div><!--end content-->
+                    </div>
+                    <!--end content-->
 
                     <!-- FAQ Item 10 -->
-                    <div class="faq-item group relative overflow-hidden border border-gray-300 rounded-md">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center">
-                            <span class="title text-lg font-semibold">Can Insight Maestro help with regulatory compliance?</span>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                             <span class="title text-lg font-semibold dark:text-slate-800">Is there a free trial available for Insight Maestro?</span>
                             <span class="faq-icon text-teal-600 text-xl">&#9662;</span>
                         </button>
-                        <div class="faq-answer text-slate-400 p-4 hidden">
-                            Yes, Insight Maestro can assist in regulatory compliance by providing detailed data insights and reports, helping you ensure that your operations meet industry standards and regulations. Ensure data security and regulatory compliance, protecting your business from potential legal issues and data breaches.
+                        <div class="faq-answer text-slate-400">
+                            Yes, we offer a free trial period so you can explore Insight Maestro's features and capabilities before committing to a subscription. Experience the full potential of Insight Maestro with a free trial and discover how it can transform your data analytics processes.
                         </div>
-                    </div><!--end content-->
-                </div><!--end grid-->
-            </div><!--end container-->
-        </section><!--end section-->
+                    </div>
+                    <!--end content-->
+                </div>
+            </div>
+        </section>
         <!-- End FAQ -->
+
+
 
         <section class="relative lg:py-24 py-16 bg-slate-50 dark:bg-slate-800" id="contact">
             <div class="container relative">
@@ -1001,8 +1015,8 @@
                 <div class="lg:col-span-3 md:text-start text-center">
                   <a href="#" class="text-[22px] focus:outline-none">
                     <img
-                      src="assets/images/logo-white1.png"
-                      class="mx-auto md:me-auto md:ms-0"
+                      src="assets/images/logo-white2.png"
+                      class="mx-auto md:me-auto md:ms-0 w-24 lg:w-28"
                       alt=""
                     />
                   </a>
@@ -1051,19 +1065,6 @@
 
         <!-- JAVASCRIPTS -->
         <script src="assets/libs/feather-icons/feather.min.js"></script>
-        <script>
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const faqAnswer = button.nextElementSibling;
-                faqAnswer.classList.toggle('hidden');
-
-                // Toggle the arrow direction
-                const faqIcon = button.querySelector('.faq-icon');
-                faqIcon.innerHTML = faqAnswer.classList.contains('hidden') ? '&#9662;' : '&#9656;';
-            });
-        });
-        </script>
-
 
         <script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js"></script>
         <script src="assets/libs/tobii/js/tobii.min.js"></script>
@@ -1071,5 +1072,28 @@
         <script src="assets/js/plugins.init.js"></script>
         <script src="assets/js/app.js"></script>
         <!-- JAVASCRIPTS -->
+          <script>
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    const icon = button.querySelector('.faq-icon');
+                    
+                    if (answer.classList.contains('show')) {
+                        answer.classList.remove('show');
+                        icon.classList.remove('rotate-180');
+                    } else {
+                        document.querySelectorAll('.faq-answer').forEach(ans => {
+                            ans.classList.remove('show');
+                        });
+                        document.querySelectorAll('.faq-icon').forEach(icn => {
+                            icn.classList.remove('rotate-180');
+                        });
+                        answer.classList.add('show');
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+        </script>
+
     </body>
 </html>
