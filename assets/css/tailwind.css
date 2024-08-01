@@ -2167,6 +2167,9 @@ html[dir=rtl] .tns-visually-hidden {
 }
 
 @media (min-width: 1024px){
+  .lg\:col-span-1{
+    grid-column: span 1 / span 1 !important;
+  }
   .lg\:col-span-10{
     grid-column: span 10 / span 10 !important;
   }
@@ -2221,6 +2224,9 @@ html[dir=rtl] .tns-visually-hidden {
   .lg\:py-24{
     padding-top: 6rem !important;
     padding-bottom: 6rem !important;
+  }
+  .lg\:text-start{
+    text-align: start !important;
   }
   .lg\:text-2xl{
     font-size: 1.5rem !important;
